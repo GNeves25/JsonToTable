@@ -6,7 +6,7 @@ body {
 
 h2 {
     color: #333;
-    margin-bottom: 20px; /* Add space below the header */
+    margin-bottom: 20px;
 }
 
 textarea {
@@ -27,25 +27,46 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00b342;
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
     margin-top: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 12px;
-    text-align: left;
+    text-align: center;
 }
 
 th {
     background-color: #f4f4f4;
     cursor: pointer;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+td:last-child {
+    border-bottom-right-radius: 8px;
 }
 
 th:hover {
@@ -62,4 +83,33 @@ tr:hover {
 
 #table {
     overflow-x: auto;
+    overflow-y: auto;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.disabled:hover {
+    color: red !important;
+    cursor: not-allowed;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.input-group .form-control {
+    border-radius: 20px 0 0 20px;
+    padding: 8px;
+}
+
+.input-group .btn {
+    border-radius: 0 20px 20px 0;
+}
+
+#table {
+    margin-top: 20px;
 }

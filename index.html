@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,15 +8,31 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="container mt-5">
     <h2>Convert JSON to Table</h2>
     <div class="mb-3">
         <textarea id="jsonInput" class="form-control" rows="10" placeholder="Enter JSON here"></textarea>
     </div>
     <button onclick="createTable()" class="btn btn-primary mb-3">Create Table</button>
+    <button id="btnDownloadExcel" onclick="downloadExcel()" class="btn btn-success mb-3 disabled">Download
+        Excel</button>
+    <button id="btnDownloadPDF" onclick="downloadPDF()" class="btn btn-danger mb-3 disabled">Download PDF</button>
+    <div class="input-group mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        <button class="btn btn-outline-secondary" type="button" onclick="searchTable()">
+            <i class="bi bi-search"></i>
+        </button>
+    </div>
     <div id="table" class="table-responsive"></div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
     <script src="script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
 </body>
+
 </html>
